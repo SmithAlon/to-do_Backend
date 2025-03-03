@@ -1,6 +1,5 @@
 flask
 requests
 flask_pymongo
-bson
 dotenv
 
