@@ -1,3 +1,8 @@
 flask
 requests
 flask_pymongo
+bson
+load_dotenv
+werkzeug-security
+bson-json_util
+bson-objectid
