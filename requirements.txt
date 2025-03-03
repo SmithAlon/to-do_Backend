@@ -1,2 +1,6 @@
 flask
-requests
+flask-pymongo
+pymongo
+python-dotenv
+werkzeug
+gunicorn
