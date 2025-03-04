@@ -5,12 +5,16 @@ from bson.json_util import dumps
 from dotenv import load_dotenv
 import os
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_cors import CORS  # Importar CORS
 
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
 # Crear la aplicación Flask
 app = Flask(__name__)
+
+# Configurar CORS para permitir solicitudes desde cualquier origen
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Configurar la conexión a MongoDB
 app.config["MONGO_URI"] = "mongodb://localhost:27017/to-do-list"  # Cambia según tu configuración
